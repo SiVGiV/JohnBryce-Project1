@@ -48,6 +48,11 @@ def new_book(book_list, *_, **__):
             'tip': 'year number (4 digits)',
             'test': lambda x: x.isdecimal() and len(x) == 4
         },
+        'total_quantity': {
+            'prompt': "Amount of this book owned by the library: ",
+            'tip': "Whole number",
+            'test': lambda x: x.isdecimal()
+        },
         'type': {
             'prompt': f"Book's loan duration ({BookType.options()}): ",
             'tip': f'book loan duration identifier ({BookType.options()})',
@@ -59,6 +64,7 @@ def new_book(book_list, *_, **__):
         user_inp['name'],
         user_inp['author'],
         int(user_inp['year']),
+        int(user_inp['total_quantity']),
         BookType(int(user_inp['type']))
     )
     # Print new object
@@ -96,6 +102,10 @@ def new_loan(loan_list, customer_list, book_list, *_, **__):
         book_res = book_res[0]
     else:
         print("Book ID cannot be found. Aborted creation of new Loan.")
+        return
+    # Test if reached book limit
+    if len(loan_list.get_by_property('bookID', book_res.ID)) >= book_res.total_quantity:
+        print("Book not in stock. Cannot create loan.")
         return
     # Try parsing loan date
     try:

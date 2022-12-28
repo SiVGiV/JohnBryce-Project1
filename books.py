@@ -46,10 +46,13 @@ class Book:
     name: str
     author: str
     year: int
+    total_quantity: int
     book_type: BookType = BookType.RET_IN_10
     ID: int = -1
 
     def __post_init__(self):
+        if self.total_quantity < 0:
+            raise ValueError("Total book quantity cannot be negative.")
         if self.ID in Book.__ID_MNGR['EXISTING-IDS']:  # check if the book id exists already
             raise BookIdClashException
         if self.ID != -1:  # check if id wasn't left blank
@@ -70,16 +73,17 @@ class Book:
             "name": self.name,
             "author": self.author,
             "year": self.year,
+            "total_quantity": self.total_quantity,
             "type": self.book_type.value
         }
         return loan_dict
 
     @staticmethod
     def fields():
-        return ['id', 'name', 'author', 'year', 'type']
+        return ['id', 'name', 'author', 'year', 'type', "total_quantity"]
 
     def __str__(self):
-        return f"{self.ID}: {self.name} ({self.year}) by {self.author}"
+        return f"{self.ID}: {self.total_quantity} of {self.name} ({self.year}) by {self.author}"
 
 
 class BookException(Exception):
