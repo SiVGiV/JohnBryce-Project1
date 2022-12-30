@@ -113,7 +113,7 @@ def new_loan(loan_list, customer_list, book_list, *_, **__):
     except ValueError as e:
         print('Cannot parse loan date - Aborting creation of new loan.\n' + str(e))
         return
-    if loan_day > dt.date.today():
+    if loan_day > dt.datetime.now():
         print("Cannot create loan for a future date. Aborting creation.")
         return
     # Calculate return day
