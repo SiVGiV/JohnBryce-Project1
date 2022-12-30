@@ -87,7 +87,9 @@ class ItemList:
                 fail_count += 1
             else:
                 success_count += 1
-        print("{0} items imported from CSV ({0} succeeded, {1} failed)".format(success_count, fail_count))
+        print("{0} items of type {2} imported from CSV ({0} succeeded, {1} failed)".format(success_count,
+                                                                                           fail_count,
+                                                                                           self.__item_type))
 
     def rewrite_db(self):
         items = []
