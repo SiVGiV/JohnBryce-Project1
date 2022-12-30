@@ -28,6 +28,7 @@ class ConsoleMenu:
             choice = input("Input does not match any of the options. Try again: ")
         if choice != "exit":
             self.__menu[choice]['func'](*args, **kwargs)
+            input("Press enter to go back to menu...")
         else:
             self.__menu[choice]['func']()
 
