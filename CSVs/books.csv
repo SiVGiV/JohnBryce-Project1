@@ -1,101 +1,101 @@
-id,name,author,year,type,total_quantity
-1,Pride and Prejudice,Austen Jane,1998,2,30
-2,The Yellow Wallpaper,Gilman Charlotte Perkins,1999,3,28
-3,Alice's Adventures in Wonderland,Carroll Lewis,1994,2,17
-4,Metamorphosis,Kafka Franz,2005,2,24
-5,Adventures of Huckleberry Finn,Twain Mark,2006,1,80
-6,The Importance of Being Earnest: A Trivial Comedy for Serious People,Wilde Oscar,2006,1,76
-7,The Adventures of Tom Sawyer,Twain Mark,2006,2,34
-8,A Doll's House: a play,Ibsen Henrik,2001,1,63
-9,The Adventures of Sherlock Holmes,Doyle Arthur Conan,1892,2,18
-10,Great Expectations,Dickens Charles,1998,1,25
-11,Ulysses,Joyce James,2003,3,75
-12,A Tale of Two Cities,Dickens Charles,1994,2,81
-13,Dracula,Stoker Bram,2013,1,95
-14,The Prince,Machiavelli Niccolo,2006,2,50
-15,The Picture of Dorian Gray,Wilde Oscar,2008,3,43
-16,War and Peace,Tolstoy Leo graf,1870,2,50
-17,Grimms' Fairy Tales,Grimm Wilhelm,2001,3,97
-18,Emma,Austen Jane,1994,3,23
-19,Beowulf: An Anglo-Saxon Epic Poem,Unknown,2005,2,22
-20,Les Misérables,Hugo Victor,2008,3,67
-21,The Romance of Lust: A Classic Victorian erotic novel,Anonymous,2009,2,68
-22,Jane Eyre: An Autobiography,Bronte Charlotte,2007,2,82
-23,Leaves of Grass,Whitman Walt,1998,2,96
-24,Dubliners,Joyce James,2001,2,44
-25,Sense and Sensibility,Austen Jane,2008,1,63
-26,Leviathan,Hobbes Thomas,2002,2,100
-27,The Strange Case of Dr. Jekyll and Mr. Hyde,Stevenson Robert Louis,1992,1,24
-28,Treasure Island,Stevenson Robert Louis,2006,3,85
-29,Wuthering Heights,Bronte Emily,2007,3,35
-30,Heart of Darkness,Conrad Joseph,1995,3,51
-31,Gulliver's Travels into Several Remote Nations of the World,Swift Jonathan,2009,2,79
-32,Peter Pan,Barrie J. M. (James Matthew),1991,3,73
-33,Siddhartha,Hesse Hermann,2008,1,59
-34,The Republic,Plato,1998,1,94
-35,Autobiography of Benjamin Franklin,Franklin Benjamin,2006,2,71
-36,The Life and Adventures of Robinson Crusoe,Defoe Daniel,2010,3,62
-37,Essays of Michel de Montaigne — Complete,Montaigne Michel de,2006,3,50
-38,A Study in Scarlet,Doyle Arthur Conan,1995,1,76
-39,The Jungle Book,Kipling Rudyard,2006,3,91
-40,Crime and Punishment,Dostoyevsky Fyodor,2006,3,19
-41,The Iliad,Homer,2006,2,9
-42,Beyond Good and Evil,Nietzsche Friedrich Wilhelm,2003,1,79
-43,Candide,Voltaire,2006,2,71
-44,Pygmalion,Shaw Bernard,2003,3,39
-45,The Complete Works of William Shakespeare,Shakespeare William,1994,3,70
-46,Oliver Twist,Dickens Charles,1996,1,76
-47,Heart of Darkness,Conrad Joseph,2006,2,7
-48,English Literature: Its History and Its Significance for the Life of the English-Speaking World,Long William J. (William Joseph),2004,2,88
-49,An Occurrence at Owl Creek Bridge,Bierce Ambrose,2008,2,26
-50,Second Treatise of Government,Locke John,2005,1,71
-51,The King James Version of the Bible,Unknown,2011,1,33
-52,The Wonderful Wizard of Oz,Baum L. Frank (Lyman Frank),2008,2,43
-53,On Liberty,Mill John Stuart,2011,3,42
-54,The Hound of the Baskervilles,Doyle Arthur Conan,2001,1,96
-55,Three Men in a Boat,Jerome Jerome K. (Jerome Klapka),2010,3,81
-56,Through the Looking-Glass,Carroll Lewis,1991,1,90
-57,The Time Machine,Wells H. G. (Herbert George),2004,3,22
-58,The Jungle,Sinclair Upton,2006,2,76
-59,Josefine Mutzenbacher: oder Die Geschichte einer Wienerischen Dirne von ihr selbst erzählt,Salten Felix,2010,3,63
-60,Hard Times,Dickens Charles,2013,3,17
-61,The Brothers Karamazov,Dostoyevsky Fyodor,2009,1,54
-62,Democracy in America — Volume 1,Tocqueville Alexis de,2006,3,81
-63,Complete Original Short Stories of Guy De Maupassant,Maupassant Guy de,2004,1,69
-64,Practical Grammar and Composition,Wood Thomas,2007,2,3
-65,David Copperfield,Dickens Charles,1996,2,64
-66,Narrative of the Captivity and Restoration of Mrs. Mary Rowlandson,Rowlandson Mary White,1997,2,2
-67,Uncle Tom's Cabin,Stowe Harriet Beecher,1995,1,84
-68,How to Analyze People on Sight: Through the Science of Human Analysis: The Five Human Types,Benedict Ralph Paine,2009,3,39
-69,The Legend of Sleepy Hollow,Irving Washington,1992,3,76
-70,Around the World in Eighty Days,Verne Jules,2008,2,16
-71,Anna Karenina,Tolstoy Leo graf,1998,3,31
-72,The Mysterious Affair at Styles,Christie Agatha,2008,2,92
-73,The Call of the Wild,London Jack,2008,2,80
-74,Anne of Green Gables,Montgomery L. M. (Lucy Maud),1992,1,50
-75,Persuasion,Austen Jane,2008,3,22
-76,Don Quixote,Cervantes Saavedra Miguel de,2004,2,40
-77,Democracy and Education: An Introduction to the Philosophy of Education,Dewey John,1997,2,40
-78,A Portrait of the Artist as a Young Man,Joyce James,2003,3,70
-79,The Tragical History of Doctor Faustus: From the Quarto of 1604,Marlowe Christopher,1997,1,47
-80,Ethan Frome,Wharton Edith,2003,1,16
-81,Paradise Lost,Milton John,1991,3,90
-82,The Tragedy of Romeo and Juliet,Shakespeare William,1997,2,97
-83,Utopia,More Thomas Saint,2005,3,58
-84,Myths and Legends of Ancient Greece and Rome,Berens E. M.,2007,3,29
-85,Common Sense,Paine Thomas,2008,1,46
-86,Northanger Abbey,Austen Jane,1994,1,45
-87,The Scarlet Letter,Hawthorne Nathaniel,1992,2,8
-88,The Communist Manifesto,Engels Friedrich,2005,2,48
-89,The Turn of the Screw,James Henry,1995,3,58
-90,Lysistrata,Aristophanes,2008,2,89
-91,The Souls of Black Folk,Du Bois W. E. B. (William Edward Burghardt),2008,3,58
-92,Madame Bovary,Flaubert Gustave,2006,1,87
-93,The Reign of Greed,Rizal Jose,2005,3,55
-94,Hedda Gabler,Ibsen Henrik,2003,3,79
-95,The Return of Sherlock Holmes,Doyle Arthur Conan,2007,2,18
-96,Le Morte d'Arthur: Volume 1,Malory Thomas Sir,1998,1,9
-97,The Works of Edgar Allan Poe — Volume 1,Poe Edgar Allan,2008,3,39
-98,Don Juan,Byron George Gordon Byron Baron,2007,3,44
-99,The War of the Worlds,Wells H. G. (Herbert George),1992,3,64
-100,Mansfield Park,Austen Jane,1994,3,40
+"id","name","author","year","type","total_quantity"
+"1","Pride and Prejudice","Austen Jane","1998","2","30"
+"2","The Yellow Wallpaper","Gilman Charlotte Perkins","1999","3","28"
+"3","Alice's Adventures in Wonderland","Carroll Lewis","1994","2","17"
+"4","Metamorphosis","Kafka Franz","2005","2","24"
+"5","Adventures of Huckleberry Finn","Twain Mark","2006","1","80"
+"6","The Importance of Being Earnest: A Trivial Comedy for Serious People","Wilde Oscar","2006","1","76"
+"7","The Adventures of Tom Sawyer","Twain Mark","2006","2","34"
+"8","A Doll's House: a play","Ibsen Henrik","2001","1","63"
+"9","The Adventures of Sherlock Holmes","Doyle Arthur Conan","1892","2","18"
+"10","Great Expectations","Dickens Charles","1998","1","25"
+"11","Ulysses","Joyce James","2003","3","75"
+"12","A Tale of Two Cities","Dickens Charles","1994","2","81"
+"13","Dracula","Stoker Bram","2013","1","95"
+"14","The Prince","Machiavelli Niccolo","2006","2","50"
+"15","The Picture of Dorian Gray","Wilde Oscar","2008","3","43"
+"16","War and Peace","Tolstoy Leo graf","1870","2","50"
+"17","Grimms' Fairy Tales","Grimm Wilhelm","2001","3","97"
+"18","Emma","Austen Jane","1994","3","23"
+"19","Beowulf: An Anglo-Saxon Epic Poem","Unknown","2005","2","22"
+"20","Les Misérables","Hugo Victor","2008","3","67"
+"21","The Romance of Lust: A Classic Victorian erotic novel","Anonymous","2009","2","68"
+"22","Jane Eyre: An Autobiography","Bronte Charlotte","2007","2","82"
+"23","Leaves of Grass","Whitman Walt","1998","2","96"
+"24","Dubliners","Joyce James","2001","2","44"
+"25","Sense and Sensibility","Austen Jane","2008","1","63"
+"26","Leviathan","Hobbes Thomas","2002","2","100"
+"27","The Strange Case of Dr. Jekyll and Mr. Hyde","Stevenson Robert Louis","1992","1","24"
+"28","Treasure Island","Stevenson Robert Louis","2006","3","85"
+"29","Wuthering Heights","Bronte Emily","2007","3","35"
+"30","Heart of Darkness","Conrad Joseph","1995","3","51"
+"31","Gulliver's Travels into Several Remote Nations of the World","Swift Jonathan","2009","2","79"
+"32","Peter Pan","Barrie J. M. (James Matthew)","1991","3","73"
+"33","Siddhartha","Hesse Hermann","2008","1","59"
+"34","The Republic","Plato","1998","1","94"
+"35","Autobiography of Benjamin Franklin","Franklin Benjamin","2006","2","71"
+"36","The Life and Adventures of Robinson Crusoe","Defoe Daniel","2010","3","62"
+"37","Essays of Michel de Montaigne — Complete","Montaigne Michel de","2006","3","50"
+"38","A Study in Scarlet","Doyle Arthur Conan","1995","1","76"
+"39","The Jungle Book","Kipling Rudyard","2006","3","91"
+"40","Crime and Punishment","Dostoyevsky Fyodor","2006","3","19"
+"41","The Iliad","Homer","2006","2","9"
+"42","Beyond Good and Evil","Nietzsche Friedrich Wilhelm","2003","1","79"
+"43","Candide","Voltaire","2006","2","71"
+"44","Pygmalion","Shaw Bernard","2003","3","39"
+"45","The Complete Works of William Shakespeare","Shakespeare William","1994","3","70"
+"46","Oliver Twist","Dickens Charles","1996","1","76"
+"47","Heart of Darkness","Conrad Joseph","2006","2","7"
+"48","English Literature: Its History and Its Significance for the Life of the English-Speaking World","Long William J. (William Joseph)","2004","2","88"
+"49","An Occurrence at Owl Creek Bridge","Bierce Ambrose","2008","2","26"
+"50","Second Treatise of Government","Locke John","2005","1","71"
+"51","The King James Version of the Bible","Unknown","2011","1","33"
+"52","The Wonderful Wizard of Oz","Baum L. Frank (Lyman Frank)","2008","2","43"
+"53","On Liberty","Mill John Stuart","2011","3","42"
+"54","The Hound of the Baskervilles","Doyle Arthur Conan","2001","1","96"
+"55","Three Men in a Boat","Jerome Jerome K. (Jerome Klapka)","2010","3","81"
+"56","Through the Looking-Glass","Carroll Lewis","1991","1","90"
+"57","The Time Machine","Wells H. G. (Herbert George)","2004","3","22"
+"58","The Jungle","Sinclair Upton","2006","2","76"
+"59","Josefine Mutzenbacher: oder Die Geschichte einer Wienerischen Dirne von ihr selbst erzählt","Salten Felix","2010","3","63"
+"60","Hard Times","Dickens Charles","2013","3","17"
+"61","The Brothers Karamazov","Dostoyevsky Fyodor","2009","1","54"
+"62","Democracy in America — Volume 1","Tocqueville Alexis de","2006","3","81"
+"63","Complete Original Short Stories of Guy De Maupassant","Maupassant Guy de","2004","1","69"
+"64","Practical Grammar and Composition","Wood Thomas","2007","2","3"
+"65","David Copperfield","Dickens Charles","1996","2","64"
+"66","Narrative of the Captivity and Restoration of Mrs. Mary Rowlandson","Rowlandson Mary White","1997","2","2"
+"67","Uncle Tom's Cabin","Stowe Harriet Beecher","1995","1","84"
+"68","How to Analyze People on Sight: Through the Science of Human Analysis: The Five Human Types","Benedict Ralph Paine","2009","3","39"
+"69","The Legend of Sleepy Hollow","Irving Washington","1992","3","76"
+"70","Around the World in Eighty Days","Verne Jules","2008","2","16"
+"71","Anna Karenina","Tolstoy Leo graf","1998","3","31"
+"72","The Mysterious Affair at Styles","Christie Agatha","2008","2","92"
+"73","The Call of the Wild","London Jack","2008","2","80"
+"74","Anne of Green Gables","Montgomery L. M. (Lucy Maud)","1992","1","50"
+"75","Persuasion","Austen Jane","2008","3","22"
+"76","Don Quixote","Cervantes Saavedra Miguel de","2004","2","40"
+"77","Democracy and Education: An Introduction to the Philosophy of Education","Dewey John","1997","2","40"
+"78","A Portrait of the Artist as a Young Man","Joyce James","2003","3","70"
+"79","The Tragical History of Doctor Faustus: From the Quarto of 1604","Marlowe Christopher","1997","1","47"
+"80","Ethan Frome","Wharton Edith","2003","1","16"
+"81","Paradise Lost","Milton John","1991","3","90"
+"82","The Tragedy of Romeo and Juliet","Shakespeare William","1997","2","97"
+"83","Utopia","More Thomas Saint","2005","3","58"
+"84","Myths and Legends of Ancient Greece and Rome","Berens E. M.","2007","3","29"
+"85","Common Sense","Paine Thomas","2008","1","46"
+"86","Northanger Abbey","Austen Jane","1994","1","45"
+"87","The Scarlet Letter","Hawthorne Nathaniel","1992","2","8"
+"88","The Communist Manifesto","Engels Friedrich","2005","2","48"
+"89","The Turn of the Screw","James Henry","1995","3","58"
+"90","Lysistrata","Aristophanes","2008","2","89"
+"91","The Souls of Black Folk","Du Bois W. E. B. (William Edward Burghardt)","2008","3","58"
+"92","Madame Bovary","Flaubert Gustave","2006","1","87"
+"93","The Reign of Greed","Rizal Jose","2005","3","55"
+"94","Hedda Gabler","Ibsen Henrik","2003","3","79"
+"95","The Return of Sherlock Holmes","Doyle Arthur Conan","2007","2","18"
+"96","Le Morte d'Arthur: Volume 1","Malory Thomas Sir","1998","1","9"
+"97","The Works of Edgar Allan Poe — Volume 1","Poe Edgar Allan","2008","3","39"
+"98","Don Juan","Byron George Gordon Byron Baron","2007","3","44"
+"99","The War of the Worlds","Wells H. G. (Herbert George)","1992","3","64"
+"100","Mansfield Park","Austen Jane","1994","3","40"
