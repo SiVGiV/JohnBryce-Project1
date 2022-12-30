@@ -53,11 +53,14 @@ class Book:
     def __post_init__(self):
         if self.total_quantity < 0:
             raise ValueError("Total book quantity cannot be negative.")
+
         if self.ID in Book.__ID_MNGR['EXISTING-IDS']:  # check if the book id exists already
             raise BookIdClashException
+
         if self.ID != -1:  # check if id wasn't left blank
             Book.__ID_MNGR['EXISTING-IDS'].add(self.ID)
             return
+        
         while Book.__ID_MNGR['NEXT-ID'] in Book.__ID_MNGR['EXISTING-IDS']:  # find a new unique id to give the book
             Book.__ID_MNGR['NEXT-ID'] += 1
         self.ID = Book.__ID_MNGR['NEXT-ID']

@@ -1,3 +1,4 @@
+import re
 from datetime import datetime
 from dataclasses import dataclass
 
@@ -15,11 +16,22 @@ class Loan:
     ID: int = -1
 
     def __post_init__(self):
+        if not re.fullmatch(r"\d{2}/\d{2}/\d{4}", self.loandate):
+            raise InvalidLoanDateException
+
+        if not re.fullmatch(r"\d{2}/\d{2}/\d{4}", self.returndate):
+            raise InvalidLoanDateException
+
+        if datetime.strptime(self.loandate, "%d/%m/%Y") > datetime.strptime(self.returndate, "%d/%m/%Y"):
+            raise DateOrderException
+
         if self.ID in Loan.__ID_MNGR['EXISTING-IDS']:  # check if the Loan id exists already
             raise LoanIdClashException
+
         if self.ID != -1:  # check if id wasn't left blank
             Loan.__ID_MNGR['EXISTING-IDS'].add(self.ID)
             return
+
         while Loan.__ID_MNGR['NEXT-ID'] in Loan.__ID_MNGR['EXISTING-IDS']:  # find new unique id for Loan
             Loan.__ID_MNGR['NEXT-ID'] += 1
         self.ID = Loan.__ID_MNGR['NEXT-ID']
