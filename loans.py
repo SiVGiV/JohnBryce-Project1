@@ -38,8 +38,7 @@ class Loan:
         Loan.__ID_MNGR['NEXT-ID'] += 1
 
     def is_late(self):
-        if datetime.strptime(self.returndate, "%d/%m/%Y") < datetime.now():
-            return True
+        return datetime.strptime(self.returndate, "%d/%m/%Y") < datetime.now()
 
     def get_dict(self):
         """
@@ -70,3 +69,17 @@ class LoanException(Exception):
 class LoanIdClashException(LoanException):
     def __str__(self):
         return "Loan ID already exists"
+
+
+class LoanDateException(LoanException):
+    pass
+
+
+class InvalidLoanDateException(LoanDateException):
+    def __str__(self):
+        return "Date format does not match DD/MM/YYYY"
+
+
+class DateOrderException(LoanDateException):
+    def __str__(self):
+        return "Return date cannot be before loan date"
