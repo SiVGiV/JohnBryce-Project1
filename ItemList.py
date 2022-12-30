@@ -20,7 +20,7 @@ def create_item(**kwargs):
             name=kwargs['name'],
             author=kwargs['author'],
             year=int(kwargs['year']),
-            total_quantity=kwargs['total_quantity'],
+            total_quantity=int(kwargs['total_quantity']),
             book_type=BookType(int(kwargs['type'])),
             ID=int(kwargs['id'])
         )
