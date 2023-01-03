@@ -1,5 +1,5 @@
 import csv
-import os.path
+import os
 from loans import Loan, LoanIdClashException
 from books import Book, BookType, BookIdClashException
 from customers import Customer, CustomerIdClashException
