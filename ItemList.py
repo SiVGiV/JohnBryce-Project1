@@ -191,6 +191,9 @@ class ItemList:
             return self
         raise TypeError("Cannot add " + str(type(other)) + " to ItemList")
 
+    def __len__(self):
+        return len(self.__list)
+
 
 class ItemListException(Exception):
     pass
