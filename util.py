@@ -1,4 +1,4 @@
-import os.path
+import os
 import warnings
 import csv
 
@@ -12,7 +12,7 @@ def csv_to_arr(filepath: str):
     lines = []
     try:
         with open(filepath, mode='r', encoding="utf-8-sig") as csvfile:
-            reader = csv.DictReader(csvfile)
+            reader = csv.DictReader(csvfile, quoting=csv.QUOTE_ALL)
             for row in reader:
                 lines.append(row)
     except IOError as e:
@@ -62,3 +62,15 @@ def append_csv(item: dict, filepath: str):
         if write_headers:
             writer.writeheader()
         writer.writerow(item)
+
+
+def verify_path(pathstr: str):
+    """
+    Takes a path to folder/file and makes sure the path to that folder exists (creates if doesn't)
+    :param pathstr: path string to file/folder
+    :return: folder path string
+    """
+    dirpath = os.path.dirname(pathstr)
+    if not os.path.exists(dirpath):
+        os.makedirs(dirpath)
+    return str(dirpath)
