@@ -135,7 +135,7 @@ class ItemList:
             else:
                 raise ItemDoesNotExistError
         else:
-            raise TypeError("ItemList.remove() only accepts Loan objects or IDs")
+            raise TypeError("ItemList.remove() only accepts objects of the type they are assigned to or IDs")
 
     def get_by_property(self, search_field: str, search_value):
         """
