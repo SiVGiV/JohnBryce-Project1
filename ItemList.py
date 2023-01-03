@@ -145,10 +145,11 @@ class ItemList:
         :return: list of all matches
         """
         results = []
+        fields = self.__item_type.fields()
+        if search_field not in fields:
+            raise ValueError("Search field does not exist.")
         for item in self:
             item_dict = item.get_dict()
-            if search_field not in item_dict:
-                raise ValueError("Search field does not exist.")
             if isinstance(item_dict[search_field], str):
                 if str(search_value.lower()) in item_dict[search_field].lower():
                     results.append(item)
