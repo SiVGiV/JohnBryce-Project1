@@ -56,19 +56,3 @@ class ConsoleMenu:
             else:
                 raise TypeError('Bad prompt type.')
         return input_dict
-
-    @staticmethod
-    def yn_question(prompt: str) -> bool:
-        """
-        Asks the user a boolean question and returns True if answer was yes, otherwise False
-        :param prompt: Question to ask
-        :return: Answer in bool form
-        """
-        answer = ConsoleMenu.user_input({
-            'ans': {
-                'prompt': prompt,
-                'tip': 'Yes or No',
-                'test': lambda x: 'y' in x.lower() or 'n' in x.lower()
-            }
-        })
-        return 'y' in answer['ans'].lower()
