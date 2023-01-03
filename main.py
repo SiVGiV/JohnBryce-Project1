@@ -1,6 +1,6 @@
 # Menu imports
 from menu import ConsoleMenu
-import menuOptions as options
+import menuOptions
 # Class imports
 from ItemList import ItemList
 from books import Book
@@ -16,21 +16,21 @@ if __name__ == "__main__":
     # Create menu
     menu_handler = ConsoleMenu(
         {
-            'Add a new customer': options.new_customer,
-            'Add a new book': options.new_book,
-            'Loan a book': options.new_loan,
-            'Return a book': options.rem_loan,
-            'Display all books': options.show_books,
-            'Display all customers': options.show_customers,
-            'Display all loans': options.show_loans,
-            'Display late loans': options.show_late,
-            'Find book by name': options.book_by_name,
-            'Find customer by name': options.customer_by_name,
-            'Remove book': options.rem_book,
-            'Remove customer': options.rem_customer
+            'Add a new customer': menuOptions.new_customer,
+            'Add a new book': menuOptions.new_book,
+            'Loan a book': menuOptions.new_loan,
+            'Return a book': menuOptions.rem_loan,
+            'Display all books': menuOptions.show_books,
+            'Display all customers': menuOptions.show_customers,
+            'Display all loans': menuOptions.show_loans,
+            'Display late loans': menuOptions.show_late,
+            'Find book by name': menuOptions.book_by_name,
+            'Find customer by name': menuOptions.customer_by_name,
+            'Remove book': menuOptions.rem_book,
+            'Remove customer': menuOptions.rem_customer
         }
     )
 
     # Run menu
     while True:
-        menu_handler.disp_main(customer_list=cl, book_list=bl, loan_list=ll)
+        menu_handler.display_main(customer_list=cl, book_list=bl, loan_list=ll)
