@@ -59,6 +59,7 @@ class ItemList:
         Creates a new csv file if one doesn't exist.
         :return: None
         """
+        util.verify_path(self.__db_path)
         if not os.path.exists(self.__db_path):
             with open(self.__db_path, 'w', newline='') as csvfile:
                 writer = csv.DictWriter(csvfile,
