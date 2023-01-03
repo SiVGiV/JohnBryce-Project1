@@ -182,6 +182,10 @@ class ItemList:
                 for item in other:
                     self.add(item)
                 return self
+            raise TypeError("Cannot add list of type " +
+                            str(type(other.__item_type)) +
+                            " to list of type " +
+                            str(type(self.__item_type)))
         if isinstance(other, self.__item_type):
             self.add(other)
             return self
