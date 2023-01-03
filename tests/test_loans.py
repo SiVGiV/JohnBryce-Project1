@@ -24,13 +24,13 @@ class TestLoanInit(unittest.TestCase):
             loans.Loan(0, 0, "10/10/2020", "abcd")
         self.assertRaises(loans.InvalidLoanDateException, init_returndate)
 
-    def test_loan_init_misordered_dates(self):
+    def test_loan_init_disordered_dates(self):
         """
-        Tests for misordered dates: DateOrderException
+        Tests for disordered dates: DateOrderException
         """
-        def init_misordered():
+        def init_disordered():
             loans.Loan(0, 0, "11/10/2020", "10/10/2020")
-        self.assertRaises(loans.DateOrderException, init_misordered)
+        self.assertRaises(loans.DateOrderException, init_disordered)
 
     def test_loan_init_existing_id(self):
         """
