@@ -14,7 +14,7 @@ class ConsoleMenu:
             self.__menu[str(choice_counter)] = {'name': choice, 'func': func}
             choice_counter += 1
 
-    def disp_main(self, *args, **kwargs):
+    def display_main(self, *args, **kwargs):
         """
         Prints main menu and waits for input.
         :return: None
@@ -36,9 +36,9 @@ class ConsoleMenu:
     def user_input(prompt_dict: dict):
         """
         Prompts a user with prompts and returns the input. if the prompt is a string does no checks,
-        if prompt is a dict: {'key': {'prompt': prompt, 'test': func}} runs until func(input) is True.
-        :param prompt_dict: {'key': 'prompt'} dictionary of all the required prompts and input patterns.
-        :return: {'key': 'input'} dictionary
+        if prompt is a dict: {'result_key': {'prompt': prompt, 'test': func}} runs until func(input) is True.
+        :param prompt_dict: {'result_key': 'prompt'} dictionary of all the required prompts and input patterns.
+        :return: {'result_key': 'input'} dictionary
         """
         input_dict = {}
         for key, prompt in prompt_dict.items():
