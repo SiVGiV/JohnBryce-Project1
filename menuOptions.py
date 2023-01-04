@@ -1,9 +1,9 @@
 # Python built-in packages
 import datetime as dt
 from datetime import datetime
-import re
 
 # Project packages
+import loans
 from menu import ConsoleMenu
 from books import Book, BookType
 from customers import Customer, CustomerException
