@@ -44,7 +44,7 @@ class Customer:
         return ['id', 'name', 'city', 'birth_year']
 
     def __str__(self):
-        return f"{self.ID}: {self.name}"
+        return f"{self.ID}: {self.name}, lives in {self.city} and born in {self.birth_year}"
 
 
 class CustomerException(Exception):
