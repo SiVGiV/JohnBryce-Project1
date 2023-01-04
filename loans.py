@@ -62,6 +62,27 @@ class Loan:
         return f"{self.ID}: {self.bookID} -> {self.custID} on {self.loandate} until {self.returndate}"
 
 
+def output_loan(loan: Loan, book_list, customer_list):
+    loan_book = book_list.get_by_property('id', loan.bookID)  # Find loaned book
+    loan_customer = customer_list.get_by_property('id', loan.custID)  # Find loaning customer
+
+    # If neither found
+    if len(loan_book) == 0 and len(loan_customer) == 0:
+        return str(loan) + " - couldn't find book or customer. Consider deleting this loan."
+
+    # If only book found
+    if len(loan_book) == 0:
+        return str(loan) + " - couldn't find book. Consider deleting this loan."
+
+    # If only customer found
+    if len(loan_customer) == 0:
+        return str(loan) + " - couldn't find customer. Consider deleting this loan."
+
+    # Print full loan with book and customer details
+    return (f"{loan.ID}: <{loan_book[0]}> loaned to <{loan_customer[0]}> on"
+            f" {loan.loandate} until {loan.returndate}")
+
+
 class LoanException(Exception):
     pass
 
