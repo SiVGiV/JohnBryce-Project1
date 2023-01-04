@@ -183,34 +183,14 @@ def show_customers(customer_list, *_, **__):
 
 def show_loans(loan_list, book_list, customer_list, *_, **__):
     for loan in loan_list:
-        loan_book = book_list.get_by_property('id', loan.bookID)  # Find loaned book
-        loan_customer = customer_list.get_by_property('id', loan.custID)  # Find loaning customer
-
-        # If neither found
-        if len(loan_book) == 0 and len(loan_customer) == 0:
-            print(loan, " - couldn't find book or customer. Consider deleting this loan.")
-            continue
-
-        # If only book found
-        if len(loan_book) == 0:
-            print(loan, " - couldn't find book. Consider deleting this loan.")
-            continue
-
-        # If only customer found
-        if len(loan_customer) == 0:
-            print(loan, " - couldn't find customer. Consider deleting this loan.")
-            continue
-
-        # Print full loan with book and customer details
-        print(f"{loan.ID}: <{loan_book[0]}> loaned to <{loan_customer[0]}> on"
-              f" {loan.loandate} until {loan.returndate}")
+        print(loans.output_loan(loan, book_list, customer_list))
 
 
-def show_late(loan_list, *_, **__):
+def show_late(loan_list, book_list, customer_list, *_, **__):
     # Print all late loans
     late_gen = (loan for loan in loan_list if loan.is_late())
     for loan in late_gen:
-        print(loan)
+        print(loans.output_loan(loan, book_list, customer_list))
 
 
 def book_by_name(book_list, *_, **__):
