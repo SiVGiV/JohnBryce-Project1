@@ -75,54 +75,24 @@ def new_book(book_list, *_, **__):
 
 def new_loan(loan_list, customer_list, book_list, *_, **__):
     # Take input
-    user_inp = ConsoleMenu.user_input({
-        'custID': {
-            'prompt': "Loaning customer's ID: ",
-            'tip': "whole number",
-            'test': lambda x: x.isdecimal()
-        },
-        'bookID': {
-            'prompt': "Loaned book's ID: ",
-            'tip': "whole number",
-            'test': lambda x: x.isdecimal()
-        },
-        'loan_date': {
-            'prompt': "Date of loan (DD/MM/YYYY): ",
-            'tip': "full date (DD/MM/YYYY)",
-            'test': lambda x: re.fullmatch(r"\d{2}/\d{2}/\d{4}", x)
-        }
-    })
-    # Check if customer exists
-    if not customer_list.get_by_property('id', int(user_inp['custID'])):
-        print("Customer ID cannot be found. Aborted creation of new Loan.")
-        return
-    # Check if book exists
-    book_res = book_list.get_by_property('id', int(user_inp['bookID']))  # saving this to calculate return date
-    if book_res:
-        book_res = book_res[0]
-    else:
-        print("Book ID cannot be found. Aborted creation of new Loan.")
-        return
+    customer_inp = input("Loaning customer's name: ")
+    chosen_customer_id = id_from_name(customer_inp, customer_list)
+    book_input = input("Book loaned: ")
+    # Find book by name
+    chosen_book_id = id_from_name(book_input, book_list)
+    chosen_book = book_list.get_by_property("id", chosen_book_id)[0]
     # Test if reached book limit
-    if len(loan_list.get_by_property('bookID', book_res.ID)) >= book_res.total_quantity:
+    if len(loan_list.get_by_property('bookID', chosen_book_id)) >= chosen_book.total_quantity:
         print("Book not in stock. Cannot create loan.")
         return
-    # Try parsing loan date
-    try:
-        loan_day = datetime.strptime(user_inp['loan_date'], "%d/%m/%Y")
-    except ValueError as e:
-        print('Cannot parse loan date - Aborting creation of new loan.\n' + str(e))
-        return
-    if loan_day > dt.datetime.now():
-        print("Cannot create loan for a future date. Aborting creation.")
-        return
+    loan_day = datetime.now()
     # Calculate return day
-    ret_day = loan_day + dt.timedelta(days=book_res.book_type.days())
+    ret_day = loan_day + dt.timedelta(days=chosen_book.book_type.days())
     # Create new loan
     new_l = Loan(
-        user_inp['custID'],
-        user_inp['bookID'],
-        user_inp['loan_date'],
+        chosen_customer_id,
+        chosen_book_id,
+        loan_day.strftime("%d/%m/%Y"),
         ret_day.strftime("%d/%m/%Y")
     )
     # Print new loan
@@ -179,17 +149,22 @@ def rem_customer(customer_list, loan_list, *_, **__):
         customer_list.remove(for_removal)
 
 
-def rem_loan(loan_list, *_, **__):
-    # Ask for input
-    user_inp = ConsoleMenu.user_input({
-        'loanID': {
-            'prompt': "ID of the loan you want removed: ",
-            'test': lambda x: x.isdecimal()
-        }
-    })
+def rem_loan(loan_list, customer_list, book_list, *_, **__):
+    customer_query = input("Please enter the customer name: ")
+    customer_id = id_from_name(customer_query, customer_list)
+    book_query = input("Please enter the book name: ")
+    book_id = id_from_name(book_query, book_list)
+    for_removal = None
+    customer_loans = loan_list.get_by_property('custID', customer_id)
+    for loan in customer_loans:
+        if loan.bookID == book_id:
+            for_removal = loan
+            break
     # Remove loan
     try:
-        removed = loan_list.remove(int(user_inp['loanID']))
+        if for_removal is None:
+            raise ItemList.ItemDoesNotExistError
+        removed = loan_list.remove(for_removal)
     except ItemList.ItemDoesNotExistError:
         print('Loan not found.')
     else:
@@ -264,3 +239,28 @@ def customer_by_name(customer_list, *_, **__):
         return
     for res in search_results:
         print(res)
+
+
+def id_from_name(name, item_list):
+    if item_list.get_list_type() is Loan:
+        raise TypeError("item_list can only be Book or Customer.")
+    search = item_list.get_by_property('name', name)
+    query_type = 'customer' if item_list.get_list_type() is Customer else 'book'
+    if not search:
+        print("Customer not found. Aborting.")
+        return
+    if len(search) > 1:
+        id_list = []
+        for item in search:
+            print(item)
+            id_list.append(item.ID)
+        item_id = ConsoleMenu.user_input({
+            "id": {
+                'prompt': f'Please enter your choice of {query_type}: ',
+                'tip': 'ID number of the list above',
+                'test': lambda x: x.isdecimal() and int(x) in id_list
+            }
+        })['id']
+        return int(item_id)
+    else:
+        return search[0].ID
